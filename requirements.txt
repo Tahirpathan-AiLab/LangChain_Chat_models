@@ -1,0 +1,23 @@
+# LangChain core and integrations
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+
+# Common chat-model providers
+langchain-openai>=0.2.0
+langchain-anthropic>=0.2.0
+langchain-google-genai>=2.0.0
+langchain-cohere>=0.3.0
+langchain-mistralai>=0.2.0
+langchain-groq>=0.2.0
+langchain-together>=0.2.0
+langchain-fireworks>=0.2.0
+langchain-nvidia-ai-endpoints>=0.3.0
+langchain-xai>=0.1.0
+langchain-perplexity>=0.1.0
+langchain-deepseek>=0.1.0
+
+# Configuration and commonly used LangChain utilities
+python-dotenv>=1.0.1
+pydantic>=2.7.0
+httpx>=0.27.0
