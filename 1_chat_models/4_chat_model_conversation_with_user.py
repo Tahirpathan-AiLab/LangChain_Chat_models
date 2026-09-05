@@ -1,15 +1,12 @@
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_openai import ChatOpenAI
+from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
 # Load environment variables from .env
 load_dotenv()
 
-# Create a ChatGoogleGenerativeAI model
-model = ChatGoogleGenerativeAI(
-    model="gemini-3.6-flash",
-    temperature=0
-)
+# Create a ChatOpenAI model
+model = ChatOpenAI(model="gpt-4o")
 
 
 chat_history = []  # Use a list to store messages
@@ -27,7 +24,7 @@ while True:
 
     # Get AI response using history
     result = model.invoke(chat_history)
-    response = result.content[0]["text"]  # Extract the AI's response text
+    response = result.content
     chat_history.append(AIMessage(content=response))  # Add AI message
 
     print(f"AI: {response}")
